@@ -116,10 +116,4 @@
         });
     });
 
-    // :: 12.0 Bar-nar-var Active Code (Myself)
-    $('.amado-nav li').click(function () {
-        $('.amado-nav li').removeClass('active');
-        $(this).addClass('active');
-    });
-
 })(jQuery);

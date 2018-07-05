@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -202,8 +204,32 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Amado.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Amado.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Amado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Amado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Amado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Amado.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs">
+      <DependentUpon>Amado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Catagory.cs">
+      <DependentUpon>Amado.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Amado.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -250,6 +276,16 @@
     <Content Include="img\product-img\product4.jpg" />
     <Content Include="img\product-img\product5.jpg" />
     <Content Include="img\product-img\product6.jpg" />
+    <Content Include="Models\Amado.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Amado.edmx</DependentUpon>
+      <LastGenOutput>Amado.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Amado.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Amado.edmx</DependentUpon>
+      <LastGenOutput>Amado.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\active.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
@@ -270,6 +306,13 @@
     <Content Include="fonts\helvetica_neu_bold-webfont.woff" />
     <Content Include="fonts\helvetica_neu_bold-webfont.woff2" />
     <Content Include="Content\core-style.css.map" />
+    <EntityDeploy Include="Models\Amado.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Amado.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Amado.edmx.diagram">
+      <DependentUpon>Amado.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\classy-nav.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -279,6 +322,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.mycart.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -341,6 +385,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
